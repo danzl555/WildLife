@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normolize.css" />
+    <title>WildLife</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo-container">
+          <a href="#" class="header__logo">
+            <img src="./img/logo.svg" width="154" alt="Веломагазин" class="logo" />
+          </a>
+          <span class="header__text">WILDLIFE</span>
+        </div>
+        
+
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Blog</a>
+            </li>
+  
+            <li class="menu__item">
+              <a href="#" class="menu__link">Contacts</a>
+            </li>
+  
+            <li class="menu__item"></li>
+              <a href="#" class="menu__link">
+                <i class="material-icons search--color">search</i>
+              </a>
+            </li>
+  
+            <li class="menu__item"></li>
+            <button class="signin-btn">Sign in</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <span class="hero__title">
+              Survival
+            </span>
+            <p class="hero__desc">
+              What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.</p>
+            <button class="default-btn donate-btn">Donate</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-text">
+        <p class="main-text__title">Latest articles</p>
+        <p class="main-text__desc">Breaking news from the wild</p>
+      </section>
+
+      <section class="animal-slider">
+                  <!-- Slider main container -->
+        <div class="animal-slider">
+          <div class="swiper mySwiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="./img/Rectangle.jpeg" alt="Image 3" />
+                    <div class="slide-text">
+                      <h2>Bird</h2>
+                      <p>Birds Fight club</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/Rectangle-1.jpeg" alt="Image 3" />
+                  <div class="slide-text">
+                    <h2>Squirrel</h2>
+                    <p>Kamikaze squirrels</p>
+                  </div>
+              </div>
+                  <div class="swiper-slide">
+                      <img src="./img/Rectangle-2.jpeg" alt="Image 3" />
+                      <div class="slide-text">
+                        <h2>Deer</h2>
+                        <p>Naturalist investigation</p>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/wolf.jpg" alt="Image 3" />
+                    <div class="slide-text">
+                      <h2>Wolf</h2>
+                      <p>Mammals</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section class="callback">
+        <p class="callback__title">Get notified about new amazing articles</p>
+        <form action="" class="callback-form">
+          <input
+            type="tel"
+            name="tel"
+            class="text-input-field callback-form__input"
+            placeholder="Email"
+          /> <button type="submit" class="default-btn callback-form__btn">
+            Send
+          </button>
+        </form>
+      </section>
+
+      
+    </main>
+
+    <footer class="footer">
+      <div class="header__logo-container">
+        <a href="#" class="header__logo">
+          <img src="./img/logo.svg" width="154" alt="Веломагазин" class="logo" />
+        </a>
+        <span class="header__text">WILDLIFE</span>
+      </div>
+    
+      <nav class="footer__nav">
+        <a href="#" class="footer__link">Articles</a>
+        <a href="#" class="footer__link">About us</a>
+        <a href="#" class="footer__link">Learn more</a>
+      </nav>
+    
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

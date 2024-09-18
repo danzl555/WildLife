@@ -1,0 +1,401 @@
+:root {
+  --black-color: #161515;
+  --base-color-orange: #CD6326;
+  --base-color-orange-hover: #E39128;
+  --base-color-orange-active: #8F5613;
+  --font-color-white: #F7F7F7;
+  --font-grey-color: #666666;
+  --font-dark-color: #333333;
+  --placeholder-text-color: #8d8d8d;
+  --background-grey-color: #CCCCCC;
+  --transition-duration: 0.3s; /*Переменная для задания скорости изменения состояний*/
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: OpenSans;
+  margin: 0;
+  color: var(--black-color);
+  background-image: url(./img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--background-grey-color);
+}
+
+main {
+  height: 1370px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*********************************  Кнопка *****************************************/
+.default-btn {
+  font-size: 23px;
+  display: inline-block;
+  padding: 11px 47px;
+  color: var(--font-color-white);
+  border-radius: 5px;
+  font-family: OpenSans;
+  background-color: var(--base-color-orange);
+  border: none; /*Рамка*/
+  outline: 1px solid transparent; /*Обводка*/ /*transparent - прозрачный*/
+  outline-offset: 2px; /*отступ обводки от кнопки*/
+  transition: outline-color var(--transition-duration),
+    background-color var(--transition-duration);
+  cursor: pointer;
+}
+.default-btn:focus-visible {
+  outline-color: var(--base-color-orange);
+}
+.default-btn:hover {
+  background-color: var(--base-color-orange-hover);
+}
+.default-btn:active {
+  background-color: var(--base-color-orange-active);
+}
+.donate-btn {
+  margin-left: 120px;
+}
+/* Кнопка входа */
+.signin-btn {
+  font-size: 23px;
+  display: inline-block;
+  padding: 11px 47px;
+  color: var(--font-color-white);
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  border: 2px solid var(--base-color-orange); /* Оранжевая рамка */
+  backdrop-filter: blur(5px); /* Размытие фона */
+  -webkit-backdrop-filter: blur(10px); /* Для поддержки Safari */
+  outline: none; /* Убираем обводку */
+  outline-offset: 2px;
+  transition: outline-color var(--transition-duration), background-color var(--transition-duration);
+  cursor: pointer;
+}
+.signin-btn:hover {
+  background-color: var(--base-color-orange-hover); /* При наведении добавляем оранжевый фон */
+  color: var(--font-color-white); /* Цвет текста остается белым */
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+.signin-btn:active {
+  background-color: var(--base-color-orange-active);
+  color: var(--font-color-white); /* Цвет текста остается белым */
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+/* ****** Иконка лупы ******** */
+.search--color {
+  color: var(--font-color-white);
+}
+
+/**********************************Поле для ввода текста************************************/
+.text-input-field {
+  padding: 11px 16px 11px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--font-dark-color);
+  background-color: var(--background-grey-color);
+  transition: border-color var(--transition-duration);
+  outline: none;
+}
+.text-input-field::placeholder {
+  /*Стиль для плацхолдера текстового поля*/
+  color: var(--placeholder-text-color);
+}
+
+/*********************************Лого*************************************/
+.logo {
+  height: 58px;
+  width: 100%;
+  display: block;
+}
+
+/*******************************Меню***************************************/
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 40px; /*Расстояние между элементами списка*/
+  list-style: none; /****Убирает точки у элементов списка***/
+  margin: 0;
+  padding-left: 0;
+}
+.menu__link {
+  color: white;
+  outline: none;
+  font-size: 23px;
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration);
+}
+.menu__link:focus-visible {
+  outline: none; /* Чтобы при нажатии на таб не было рамки */
+  background-color: var(--base-color-green);
+  color: var(--black-color);
+}
+.menu__link:hover {
+  color: var(--base-color-orange-hover);
+}
+.menu__link a:active {
+  color: var(--base-color-orange-active);
+}
+
+/**********************************Форма обратной связи**********************************************/
+
+.callback-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.callback-form__input {
+  flex-basis: 400px; /*Ширина текстового поля для ввода*/
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.callback-form__btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+}
+
+/* Шапка */
+
+.header__logo {
+  display: block;
+  padding: 22px 0px;
+  background-color: var(--base-color-green);
+  outline: none;
+  transition: background-color var(--transition-duration);
+}
+.header__logo:hover {
+  background-color: var(--base-color-green-hover);
+}
+.header__logo:active {
+  background-color: var(--base-color-green-active);
+}
+.header__container {
+  padding: 0px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__text {
+  display: block;
+  font-size: 32px;
+}
+.header__logo-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  gap: 20px;
+}
+
+/*Приветственный экран*/
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  gap: 30px;
+}
+
+.hero__content {
+  flex-basis: 484px;
+}
+.hero__title {
+  font-size: 48px;
+  margin-left: 120px;
+  color: var(--base-color-orange);
+  font-family: OpenSans;
+}
+.hero__desc {
+  color: var(--font-color-white);
+  font-family: OpenSans;
+  font-size: 18px;
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 48px;
+  max-width: 274px;
+}
+
+/* Заголовок */
+.main-text {
+  margin-top: 420px;
+}
+.main-text__title {
+  color: var(--font-dark-color);
+  text-align: center;
+  font-size: 48px;
+  font-family: OpenSans;
+  font-weight: 400;
+}
+.main-text__desc {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: OpenSans;
+  color: var(--font-grey-color);
+  text-align: center;
+}
+
+/* Слайдер */
+.animal-slider {
+  margin-top: 130px;
+  position: relative;
+}
+
+.swiper {
+  max-width: 1020px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 360px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  position: absolute;
+  width: 300px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.slide-text h2 {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: OpenSans;
+  margin: 0;
+}
+
+.slide-text p {
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* Кнопки навигации */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 120px; 
+  color: var(--font-dark-color);
+  font-weight: 700;
+
+}
+
+.swiper-button-next {
+  right: 120px; 
+  color: var(--font-dark-color);
+  font-weight: 700;
+}
+
+.callback__title {
+  color: var(--font-dark-color);
+  text-align: center;
+  font-size: 27px;
+  margin-top: 80px;
+}
+
+.footer {
+  margin-top: 700px;
+  height: 360px;
+  padding: 23px 15px;
+  background-image: url(./img/footer.jpeg);
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  opacity: 50%;
+}
+.footer-link {
+  line-height: 360px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 120px;
+  padding-right: 120px;
+  color: var(--font-color-white);
+}
+
+.footer__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: #aaa;
+}
+
+.footer__social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__social-link {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: #aaa;
+}
+
+.fab {
+  font-size: 30px;
+}
