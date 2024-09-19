@@ -130,7 +130,9 @@ a {
   width: 100%;
   display: block;
 }
-
+.header__span {
+  color: var(--font-color-white);
+}
 /*******************************Меню***************************************/
 .menu__list {
   display: flex;
